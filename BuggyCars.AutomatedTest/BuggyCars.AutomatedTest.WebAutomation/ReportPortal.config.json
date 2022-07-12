@@ -1,0 +1,17 @@
+﻿{
+    "$schema": "https://raw.githubusercontent.com/reportportal/agent-net-specflow/master/ReportPortal.SpecFlowPlugin/ReportPortal.config.schema",
+    "enabled": false,
+    "server": {
+        "url": "#{ReportPortalURL}",
+        "project": "#{ReportPortalProject}",
+        "authentication": {
+            "uuid": "#{ReportPortalUUID}"
+        }
+    },
+    "launch": {
+        "name": "#{ReportPortalLaunchName}",
+        "description": "#{ReportPortalLaunchDesc}",
+        "debugMode": "#{DebugMode}",
+        "tags": [ "#{ReportPortalTag1}" ]
+    }
+}

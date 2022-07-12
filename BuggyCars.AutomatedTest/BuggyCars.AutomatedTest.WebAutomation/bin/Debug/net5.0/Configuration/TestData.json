@@ -1,0 +1,20 @@
+﻿{
+  "LoyaltyPersonas": {
+    "Basic": {
+      "Identifier": "youniyouwo",
+      "Password": "Abc12345!"
+    }
+  },
+  "MemberIdentifierUnregistered": "vista.occ.automation+unregistered@gmail.com",
+  "MemberIdentifierUnregisteredPassword": "Password123",
+  "MemberIncorrectPassword": "Unregistered123",
+  "PasswordWithoutUppercase": "abc12345",
+  "SignUpDetails": {
+    "Name": {
+      "GivenName": "Michael",
+      "FamilyName": "Allan"
+    },
+    "Email": "buggycar.automation+signUp@gmail.com",
+    "Password": "Abc12345!"
+  }
+}

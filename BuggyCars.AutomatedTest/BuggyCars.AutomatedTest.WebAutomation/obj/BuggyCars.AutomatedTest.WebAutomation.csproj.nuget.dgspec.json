@@ -1,0 +1,190 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Vista_Work\\Interview\\BuggyCars_Web_Automation\\BuggyCarsAutomatedTest\\BuggyCars.AutomatedTest\\BuggyCars.AutomatedTest.WebAutomation\\BuggyCars.AutomatedTest.WebAutomation.csproj": {}
+  },
+  "projects": {
+    "C:\\Vista_Work\\Interview\\BuggyCars_Web_Automation\\BuggyCarsAutomatedTest\\BuggyCars.AutomatedTest\\BuggyCars.AutomatedTest.WebAutomation\\BuggyCars.AutomatedTest.WebAutomation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Vista_Work\\Interview\\BuggyCars_Web_Automation\\BuggyCarsAutomatedTest\\BuggyCars.AutomatedTest\\BuggyCars.AutomatedTest.WebAutomation\\BuggyCars.AutomatedTest.WebAutomation.csproj",
+        "projectName": "BuggyCars.AutomatedTest.WebAutomation",
+        "projectPath": "C:\\Vista_Work\\Interview\\BuggyCars_Web_Automation\\BuggyCarsAutomatedTest\\BuggyCars.AutomatedTest\\BuggyCars.AutomatedTest.WebAutomation\\BuggyCars.AutomatedTest.WebAutomation.csproj",
+        "packagesPath": "C:\\Users\\Qianqian.Wu\\.nuget\\packages\\",
+        "outputPath": "C:\\Vista_Work\\Interview\\BuggyCars_Web_Automation\\BuggyCarsAutomatedTest\\BuggyCars.AutomatedTest\\BuggyCars.AutomatedTest.WebAutomation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Qianqian.Wu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "BrowserStackLocal": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.16.0, )"
+            },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Core": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "MyYamlSettingsParser": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "NUnit.ConsoleRunner": {
+              "target": "Package",
+              "version": "[3.15.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.2.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "ReportPortal.Client": {
+              "target": "Package",
+              "version": "[3.0.6, )"
+            },
+            "ReportPortal.Log4Net": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "ReportPortal.Shared": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "ReportPortal.SpecFlow": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Selenium.Firefox.WebDriver": {
+              "target": "Package",
+              "version": "[0.27.0, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[103.0.5060.5300, )"
+            },
+            "Selenium.WebDriver.MSEdgeDriver": {
+              "target": "Package",
+              "version": "[100.0.1185.50, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.9.58, )"
+            },
+            "SpecFlow.Assist.Dynamic": {
+              "target": "Package",
+              "version": "[1.4.2, )"
+            },
+            "SpecFlow.NUnit": {
+              "target": "Package",
+              "version": "[3.9.58, )"
+            },
+            "SpecFlow.NUnit.Runners": {
+              "target": "Package",
+              "version": "[3.9.58, )"
+            },
+            "SpecFlow.Plus.LivingDocPlugin": {
+              "target": "Package",
+              "version": "[3.9.57, )"
+            },
+            "SpecFlow.Tools.MsBuild.Generation": {
+              "target": "Package",
+              "version": "[3.9.58, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "YamlDotNet.NetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.14, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

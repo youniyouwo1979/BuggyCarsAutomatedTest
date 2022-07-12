@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)specflow\3.9.58\build\SpecFlow.targets" Condition="Exists('$(NuGetPackageRoot)specflow\3.9.58\build\SpecFlow.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.tools.msbuild.generation\3.9.58\build\SpecFlow.Tools.MsBuild.Generation.targets" Condition="Exists('$(NuGetPackageRoot)specflow.tools.msbuild.generation\3.9.58\build\SpecFlow.Tools.MsBuild.Generation.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.plus.livingdocplugin\3.9.57\build\SpecFlow.Plus.LivingDocPlugin.targets" Condition="Exists('$(NuGetPackageRoot)specflow.plus.livingdocplugin\3.9.57\build\SpecFlow.Plus.LivingDocPlugin.targets')" />
+    <Import Project="$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('$(NuGetPackageRoot)netstandard.library\2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+    <Import Project="$(NuGetPackageRoot)specflow.nunit\3.9.58\build\SpecFlow.NUnit.targets" Condition="Exists('$(NuGetPackageRoot)specflow.nunit\3.9.58\build\SpecFlow.NUnit.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.msedgedriver\100.0.1185.50\build\Selenium.WebDriver.MSEdgeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.msedgedriver\100.0.1185.50\build\Selenium.WebDriver.MSEdgeDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.webdriver.chromedriver\103.0.5060.5300\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.webdriver.chromedriver\103.0.5060.5300\build\Selenium.WebDriver.ChromeDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)selenium.firefox.webdriver\0.27.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('$(NuGetPackageRoot)selenium.firefox.webdriver\0.27.0\build\Selenium.Firefox.WebDriver.targets')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.client\3.0.6\build\netstandard2.0\ReportPortal.Client.targets" Condition="Exists('$(NuGetPackageRoot)reportportal.client\3.0.6\build\netstandard2.0\ReportPortal.Client.targets')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.shared\3.2.0\build\netstandard2.0\ReportPortal.Shared.targets" Condition="Exists('$(NuGetPackageRoot)reportportal.shared\3.2.0\build\netstandard2.0\ReportPortal.Shared.targets')" />
+    <Import Project="$(NuGetPackageRoot)reportportal.specflow\3.3.0\build\netstandard2.0\ReportPortal.SpecFlow.targets" Condition="Exists('$(NuGetPackageRoot)reportportal.specflow\3.3.0\build\netstandard2.0\ReportPortal.SpecFlow.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.1.0\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.1.0\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.1.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.1.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.targets')" />
+  </ImportGroup>
+</Project>
