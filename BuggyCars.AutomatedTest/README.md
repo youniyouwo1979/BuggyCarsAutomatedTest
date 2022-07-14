@@ -16,6 +16,7 @@ Before running automation tests, follow the below setup steps:
 1. Launch the automation code in Visual Studio:
 
 Step 1: Launch the visual studio, select 'Open a project or solution'
+
 Step 2: Locate the local folder where the automation repository is cloned, and select solution file 'BuggyCars.AutomatedTest.sln'
 
 Note: The target framework of the project is .NET 5.0. When the solution is opened, it could shows some error, and it would prompt to install .NET 5.0
