@@ -19,34 +19,41 @@ Before running automation tests, follow the below setup steps:
 
 	Step 2: Locate the local folder where the automation repository is cloned, and select solution file 'BuggyCars.AutomatedTest.sln'
 
-Note: The target framework of the project is .NET 5.0. When the solution is opened, it could shows some error, and it would prompt to install .NET 5.0
+	Note: The target framework of the project is .NET 5.0. When the solution is opened, it could shows some error, and it would prompt to install .NET 5.0
 
 2. Install Specflow extension:
 
-The automation tests are built using Specflow framework. The Specflow extension is required to be installed before running tests.
+	The automation tests are built using Specflow framework. The Specflow extension is required to be installed before running tests.
 
-To install it:
+	To install it:
 
-Step 1: Select menu 'Extensions'
-Step 2: Select 'Manange Extensions'
-Step 3: Search 'Specflow' in search text box. The Extension 'Specflow for Visual Studio 2022' is available to install
-Step 4: Install the Extension 'Specflow for Visual Studio 2022'
+		Step 1: Select menu 'Extensions'
+
+		Step 2: Select 'Manange Extensions'
+
+		Step 3: Search 'Specflow' in search text box. The Extension 'Specflow for Visual Studio 2022' is available to install
+
+		Step 4: Install the Extension 'Specflow for Visual Studio 2022'
 
 3. Configure nuget packages:
 
-The nuget packages used by the project need to be installed properly. Otherwise, the project build will fail. 
+	The nuget packages used by the project need to be installed properly. Otherwise, the project build will fail. 
 
-To validate if nuget packages are installed properlty:
+	To validate if nuget packages are installed properlty:
 
-Step 1: Select menu 'Build'
-Step 2: Select 'Rebuild Solution'
+		Step 1: Select menu 'Build'
 
-If there are build failure, need to restore the nuget packages:
+		Step 2: Select 'Rebuild Solution'
 
-Option 1: Right click on the Solution, and select 'Restore NuGet Packages'
-Option 2: Select menu 'Tools', 'NuGet Package Manager', 'Package Manager Console'
-	Step 1: In the console, execute the command: dotnet restore
-	Step 2: Then rebuild solution
+	If there are build failure, need to restore the nuget packages:
+
+		Option 1: Right click on the Solution, and select 'Restore NuGet Packages'
+		
+		Option 2: Select menu 'Tools', 'NuGet Package Manager', 'Package Manager Console'
+	
+			Step 1: In the console, execute the command: dotnet restore
+
+			Step 2: Then rebuild solution
 
 ### Steps to execute automation tests
 
@@ -54,8 +61,8 @@ The tests can be executed within Visual Studio. The Test Explorer is used to exe
 
 1. Open Test Explorer tab:
 
-Select menu 'View' -> 'Test Explorer'
+	Select menu 'View' -> 'Test Explorer'
 
 2. Select the test scenario to be exectued from the tree within the Test Explorer tab:
 
-Right click on the test scenario -> 'Run'
+	Right click on the test scenario -> 'Run'
