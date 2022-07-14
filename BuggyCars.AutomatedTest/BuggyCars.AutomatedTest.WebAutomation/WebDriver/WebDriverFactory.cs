@@ -2,7 +2,7 @@
 using log4net;
 using BuggyCars.AutomatedTest.WebAutomation.Configuration;
 using BuggyCars.AutomatedTest.WebAutomation.AuxiliaryMethods.Helpers;
-using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Browserstack;
+//using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Browserstack;
 using BuggyCars.AutomatedTest.WebAutomation.WebDriver.LocalBrowser;
 using OpenQA.Selenium;
 
@@ -13,16 +13,16 @@ namespace BuggyCars.AutomatedTest.WebAutomation.WebDriver
         private static readonly ILog Logger = Log4NetHelper.GetLogger(typeof(WebDriverFactory));
 
         private readonly AutomationSettings _settings;
-        private readonly IBrowserStackDriverFactory _browserStackDriverFactory;
+        //private readonly IBrowserStackDriverFactory _browserStackDriverFactory;
         private readonly ILocalBrowserDriverFactory _localBrowserDriverFactory;
 
         public WebDriverFactory(
             AutomationSettings settings,
-            IBrowserStackDriverFactory browserStackDriverFactory,
+            //IBrowserStackDriverFactory browserStackDriverFactory,
             ILocalBrowserDriverFactory localBrowserDriverFactory)
         {
             _settings = settings;
-            _browserStackDriverFactory = browserStackDriverFactory;
+            //_browserStackDriverFactory = browserStackDriverFactory;
             _localBrowserDriverFactory = localBrowserDriverFactory;
         }
 
@@ -34,9 +34,9 @@ namespace BuggyCars.AutomatedTest.WebAutomation.WebDriver
                     Logger.Debug("Using Local Browser");
                     return _localBrowserDriverFactory.GetLocalBrowserWebDriver(browserName).WebDriver;
 
-                case BrowserHost.BrowserStack:
-                    Logger.Debug("Using BrowserStack");
-                    return _browserStackDriverFactory.GetBrowserStackWebDriver(browserName).RemoteWebDriver;
+                //case BrowserHost.BrowserStack:
+                //    Logger.Debug("Using BrowserStack");
+                //    return _browserStackDriverFactory.GetBrowserStackWebDriver(browserName).RemoteWebDriver;
 
                 default:
                     Logger.Error($"No Browser Configured with name: '{_settings.BrowserHost}'");

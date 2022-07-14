@@ -20,50 +20,6 @@ namespace BuggyCars.AutomatedTest.WebAutomation.AuxiliaryMethods.Helpers
         {
             return instance ?? throw new ArgumentNullException(parameterName);
         }
-
-        /// <summary>
-        /// Ensures the specified string is not <see langword="null"/> or empty.
-        /// </summary>
-        /// <param name="source">The string to check.</param>
-        /// <param name="parameterName">The name of the parameter the source string came from.</param>
-        /// <returns>The string specified by <paramref name="source"/>.</returns>
-        /// <exception cref="ArgumentNullException">The <paramref name="source"/> parameter is <see langword="null"/>.</exception>
-        /// <exception cref="ArgumentNullException">The <paramref name="parameterName"/> parameter is <see langword="null"/>.</exception>
-        /// <exception cref="ArgumentException">The <paramref name="source"/> parameter is empty.</exception>
-        internal static string NotNullOrEmpty([ValidatedNotNull] string source, string parameterName)
-        {
-            NotNull(source, parameterName);
-            NotNull(parameterName, nameof(parameterName));
-
-            if (string.IsNullOrEmpty(source))
-            {
-                throw new ArgumentException("The parameter must not be empty.", parameterName);
-            }
-
-            return source;
-        }
-
-        /// <summary>
-        /// Ensures the specified string is not <see langword="null"/>, empty, or contains only white space.
-        /// </summary>
-        /// <param name="source">The string to check.</param>
-        /// <param name="parameterName">The name of the parameter the source string came from.</param>
-        /// <returns>The string specified by <paramref name="source"/>.</returns>
-        /// <exception cref="ArgumentNullException">The <paramref name="source"/> parameter is <see langword="null"/>.</exception>
-        /// <exception cref="ArgumentNullException">The <paramref name="parameterName"/> parameter is <see langword="null"/>.</exception>
-        /// <exception cref="ArgumentException">The <paramref name="source"/> parameter is empty or contains only white space.</exception>
-        internal static string NotNullOrWhiteSpace([ValidatedNotNull] string source, string parameterName)
-        {
-            NotNull(source, parameterName);
-            NotNull(parameterName, nameof(parameterName));
-
-            if (string.IsNullOrWhiteSpace(source))
-            {
-                throw new ArgumentException("The parameter must not be empty or contain only white space.", parameterName);
-            }
-
-            return source;
-        }
     }
 
     /// <summary>

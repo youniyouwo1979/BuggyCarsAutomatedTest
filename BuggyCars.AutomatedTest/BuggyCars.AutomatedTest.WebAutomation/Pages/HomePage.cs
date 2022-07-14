@@ -17,7 +17,17 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Pages
         public void NavigateToHomePage()
         {
             var homePageUrl = Settings.HomePageUrl;
-            NavigateToUrlAndWaitUntilLoaded(homePageUrl, ElementLocators.HomePage.PopularMakeImage);
+            NavigateToUrlAndWaitUntilLoaded(homePageUrl, ElementLocators.Home.PopularMakeImage);
+        }
+
+        public void SelectPopularModel()
+        {
+            Click(ElementLocators.Home.PopularModelImage);
+        }
+
+        public void SelectOverallRating()
+        {
+            Click(ElementLocators.Home.OveralRatingImage);
         }
     }
 }

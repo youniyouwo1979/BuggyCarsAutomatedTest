@@ -11,10 +11,8 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Configuration
 
         public string MemberIdentifierUnregisteredPassword { get; set; }
 
-        public string MemberIncorrectPassword { get; set; }
-
-        public string PasswordWithoutUppercase { get; set; }
-
         public SignUpDetails SignUpDetails { get; set; }
+
+        public string Comment { get; set; }
     }
 }

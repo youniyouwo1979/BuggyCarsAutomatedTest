@@ -5,10 +5,10 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Locators
 {
     public static partial class ElementLocators
     {
-        internal static class HomePage
+        internal static class GeneralElements
         {
-            public static NamedLocator PopularMakeImage
-                => NamedLocator.Create(By.CssSelector("input[name='password']"), "Password textBox");
+            public static NamedLocator Text(string text)
+                => NamedLocator.Create(By.XPath($"//div//*[contains(text(),'{text}')]"), $"Text - {text}");
         }
     }
 }

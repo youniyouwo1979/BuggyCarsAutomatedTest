@@ -1,15 +1,11 @@
 ﻿using System;
-using System.IO;
 using BoDi;
 using Lumos.CMS.AutomatedTests.API.AuxiliaryMethods.Extensions;
 using BuggyCars.AutomatedTest.WebAutomation.Configuration;
 using Newtonsoft.Json;
-using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Browserstack;
-using System.Net.Http;
-using System.Text;
-using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Setup;
-using System.Net.Http.Headers;
-using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Settings;
+//using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Browserstack;
+//using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Setup;
+//using BuggyCars.AutomatedTest.WebAutomation.WebDriver.Settings;
 using BuggyCars.AutomatedTest.WebAutomation.WebDriver.LocalBrowser;
 using BuggyCars.AutomatedTest.WebAutomation.WebDriver;
 
@@ -53,42 +49,42 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Hooks
                 return settings;
             });
 
-            // Http client factory
-            objectContainer.RegisterFactoryAs<IHttpClientFactory>(o =>
-            {
-                var httpClient = new HttpClient();
-                var settings = o.Resolve<AutomationSettings>();
-                var byteArray = Encoding.ASCII.GetBytes($"{settings.BrowserStackUser}:{settings.BrowserStackKey}");
-                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
+            //// Http client factory
+            //objectContainer.RegisterFactoryAs<IHttpClientFactory>(o =>
+            //{
+            //    var httpClient = new HttpClient();
+            //    var settings = o.Resolve<AutomationSettings>();
+            //    var byteArray = Encoding.ASCII.GetBytes($"{settings.BrowserStackUser}:{settings.BrowserStackKey}");
+            //    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
 
-                return new HttpClientFactory(httpClient);
-            });
+            //    return new HttpClientFactory(httpClient);
+            //});
 
-            objectContainer.RegisterFactoryAs<IBrowserStackSettingsFactory>(o =>
-            {
-                return new BrowserStackSettingsFactory(o.Resolve<AutomationSettings>());
-            });
+            //objectContainer.RegisterFactoryAs<IBrowserStackSettingsFactory>(o =>
+            //{
+            //    return new BrowserStackSettingsFactory(o.Resolve<AutomationSettings>());
+            //});
 
-            objectContainer.RegisterFactoryAs<IBrowserStackDriverFactory>(o =>
-            {
-                return new BrowserStackDriverFactory(
-                    o.Resolve<IBrowserStackSettingsFactory>(),
-                    o.Resolve<BrowserStackService>(),
-                    o.Resolve<AutomationSettings>());
-            });
+            //objectContainer.RegisterFactoryAs<IBrowserStackDriverFactory>(o =>
+            //{
+            //    return new BrowserStackDriverFactory(
+            //        o.Resolve<IBrowserStackSettingsFactory>(),
+            //        o.Resolve<BrowserStackService>(),
+            //        o.Resolve<AutomationSettings>());
+            //});
 
-            objectContainer.RegisterFactoryAs<BrowserStackService>(o =>
-            {
-                return new BrowserStackService(
-                    o.Resolve<AutomationSettings>(),
-                    o.Resolve<BrowserStackInfo>());
-            });
+            //objectContainer.RegisterFactoryAs<BrowserStackService>(o =>
+            //{
+            //    return new BrowserStackService(
+            //        o.Resolve<AutomationSettings>(),
+            //        o.Resolve<BrowserStackInfo>());
+            //});
 
-            objectContainer.RegisterFactoryAs<BrowserStackInfo>(o =>
-            {
-                return new BrowserStackInfo(
-                    o.Resolve<IHttpClientFactory>());
-            });
+            //objectContainer.RegisterFactoryAs<BrowserStackInfo>(o =>
+            //{
+            //    return new BrowserStackInfo(
+            //        o.Resolve<IHttpClientFactory>());
+            //});
 
             objectContainer.RegisterFactoryAs<ILocalBrowserDriverFactory>(o =>
             {
@@ -104,7 +100,7 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Hooks
             {
                 return new WebDriverFactory(
                     o.Resolve<AutomationSettings>(),
-                    o.Resolve<IBrowserStackDriverFactory>(),
+                    //o.Resolve<IBrowserStackDriverFactory>(),
                     o.Resolve<ILocalBrowserDriverFactory>());
             });
         }

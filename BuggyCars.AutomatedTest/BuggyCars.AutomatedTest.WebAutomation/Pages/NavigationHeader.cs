@@ -6,9 +6,6 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Pages
 {
     public class NavigationHeader : BasePage
     {
-        private readonly AutomationSettings _settings;
-        //private readonly HomePage _homePage;
-
         public NavigationHeader(
             AutomationSettings settings,
             BrowserBase browser,
@@ -39,19 +36,34 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Pages
             Click(ElementLocators.NavigationHeader.LoginButton);
         }
 
+        public void ClickLogo()
+        {
+            Click(ElementLocators.NavigationHeader.LogoLink);
+        }
+
         public void VerifyLogoutDisplayed()
         {
-            WaitForElement(ElementLocators.NavigationHeader.LogoutNavItem);
+            WaitForElement(ElementLocators.NavigationHeader.LogoutLink);
         }
 
         public void ClickLogout()
         {
-            Click(ElementLocators.NavigationHeader.LogoutNavItem);
+            Click(ElementLocators.NavigationHeader.LogoutLink);
         }
 
         public void VerifyLoginButtonDisplayed()
         {
             WaitForElement(ElementLocators.NavigationHeader.LoginButton);
+        }
+
+        public void ClickRegister()
+        {
+            Click(ElementLocators.NavigationHeader.RegisterLink);
+        }
+
+        public void ClickProfile()
+        {
+            Click(ElementLocators.NavigationHeader.ProfileLink);
         }
     }
 }

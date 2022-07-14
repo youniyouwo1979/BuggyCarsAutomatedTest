@@ -1,9 +1,7 @@
 ﻿{
-  "ErrorGiftCardExpired": "Please fill out this field.",
-  "ErrorGiftCardNoBalance": "Invalid username/password",
-  "SuccessUpdateMemberDetails": "Your details have been updated",
-  "SuccessChangePassword": "Your password has been updated.",
-  "SuccessAddedToCart": "Successfully added to cart!",
-  "WarningNoTicketsAdded": "You must select at least one ticket.",
-  "WarningIncorrectTicketCount": "Your selected tickets count is less than the seats count."
+  "ErrorSignInInvalidCredentials": "Invalid username/password",
+  "ErrorSignUpLoyaltyAlreadyRegistered": "UsernameExistsException: User already exists",
+  "SuccessMemberRegistration": "Registration is successful",
+  "SuccessMemberUpdateProfile": "The profile has been saved successful",
+  "SuccessVoteComplete": "Thank you for your vote!"
 }

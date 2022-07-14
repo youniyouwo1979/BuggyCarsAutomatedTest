@@ -27,6 +27,7 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Hooks
         public static void BeforeTestRun()
         {
             _logger.Debug("XXXXXXXXXXXXXXX        STARTING TEST RUN      XXXXXXXXXXXXXXX");
+            BrowserBase.CreateScreenshotDirectory();
         }
 
         /// <summary>
@@ -105,6 +106,8 @@ namespace BuggyCars.AutomatedTest.WebAutomation.Hooks
         public void AfterScenario()
         {
             _logger.Debug("XXXXXXXXXXXXXXX        FINISHING SCENARIO      XXXXXXXXXXXXXXX");
+            //_browser.BrowserStackMarkSessionStatus();
+            _browser.Dispose();
         }
     }
 }

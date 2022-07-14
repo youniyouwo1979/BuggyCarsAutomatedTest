@@ -2,8 +2,8 @@
 {
     public class PersonName
     {
-        public string GivenName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
 
-        public string FamilyName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
     }
 }

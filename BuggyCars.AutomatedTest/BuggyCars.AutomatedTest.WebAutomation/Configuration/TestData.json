@@ -1,7 +1,7 @@
 ﻿{
   "LoyaltyPersonas": {
     "Basic": {
-      "Identifier": "youniyouwo",
+      "Login": "youniyouwo",
       "Password": "Abc12345!"
     }
   },
@@ -11,10 +11,11 @@
   "PasswordWithoutUppercase": "abc12345",
   "SignUpDetails": {
     "Name": {
-      "GivenName": "Michael",
-      "FamilyName": "Allan"
+      "FirstName": "Michael",
+      "LastName": "Allan"
     },
-    "Email": "buggycar.automation+signUp@gmail.com",
+    "Login": "newloginuser",
     "Password": "Abc12345!"
-  }
+  },
+  "Comment": "very nice car"
 }

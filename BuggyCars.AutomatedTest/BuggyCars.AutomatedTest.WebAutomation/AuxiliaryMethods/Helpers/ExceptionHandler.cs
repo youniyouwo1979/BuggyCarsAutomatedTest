@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BuggyCars.AutomatedTest.WebAutomation.Pages;
 using log4net;
 using NUnit.Framework;
 
@@ -11,6 +14,12 @@ namespace BuggyCars.AutomatedTest.WebAutomation.AuxiliaryMethods.Helpers
     public class ExceptionHandler
     {
         private readonly ILog _logger = Log4NetHelper.GetLogger(typeof(ExceptionHandler));
+        private readonly BrowserBase _browser;
+
+        public ExceptionHandler(BrowserBase browser)
+        {
+            _browser = browser;
+        }
 
         /// <summary>
         /// Executes the action, logs the errors and fails the test.when there is an exception.
@@ -37,8 +46,15 @@ namespace BuggyCars.AutomatedTest.WebAutomation.AuxiliaryMethods.Helpers
         private void LogErrorAndFailTheTest(Exception e)
         {
             Preconditions.NotNull(e, nameof(e));
-            _logger.Error($"Test failed. Reason: {e.Message}");
-            Assert.Fail($"Test failed. Reason: {e.Message}");
+            var screenshotName = TestContext.CurrentContext.Test.Name;
+            screenshotName = string.Concat(screenshotName.Split(Path.GetInvalidFileNameChars()));
+            var date = DateTime.Now;
+            var formattedDate = date.ToString("dd-MM_HH-mm", CultureInfo.InvariantCulture);
+            var screenshotNameWithCurrentTime = screenshotName + "_" + formattedDate;
+            var pageUrl = _browser.GetPageUrl();
+            var screenshotPath = _browser.TakeScreenshot(screenshotNameWithCurrentTime);
+            _logger.Error($"Test failed. Reason: {e.Message} .\n Screenshot: {screenshotPath} .\n Page url: {pageUrl}");
+            Assert.Fail($"Test failed. Reason: {e.Message} .\n Screenshot: {screenshotPath} .\n Page url: {pageUrl}");
         }
     }
 }
