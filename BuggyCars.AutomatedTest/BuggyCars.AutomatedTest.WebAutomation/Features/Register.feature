@@ -4,7 +4,7 @@ Background: Pre-Condition
 	Given a home page
 
 @HighPriority
-Scenario: Sign up as a new member
+Scenario: Register as a new member
 	When a new member registers
 	Then register is successful
 
