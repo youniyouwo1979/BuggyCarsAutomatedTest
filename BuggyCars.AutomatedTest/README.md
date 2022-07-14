@@ -9,6 +9,8 @@ This file contains the prerequisites setup section and provide the steps to excu
 1. Install Visual Studio 2022
 2. Clone the automation test repository: https://github.com/youniyouwo1979/BuggyCarsAutomatedTest.git
 
+	Clone the feature branch: initial_setup
+
 ### Setup tips
 
 Before running automation tests, follow the below setup steps:
